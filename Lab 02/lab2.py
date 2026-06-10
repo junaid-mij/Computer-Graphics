@@ -8,7 +8,7 @@ def display():
     glLoadIdentity()
     glOrtho(0, 600, 0, 600, -1, 1)
 
-    # Green Square
+    # Small Green Square (Bottom-Left)
     glColor3f(0, 1, 0)
     glBegin(GL_QUADS)
     glVertex2f(50, 50)
@@ -17,7 +17,7 @@ def display():
     glVertex2f(50, 150)
     glEnd()
 
-    # Purple Triangle
+    # Large Purple Triangle (Top-Right)
     glColor3f(0.6, 0.0, 0.8)
     glBegin(GL_TRIANGLES)
     glVertex2f(400, 400)
@@ -25,7 +25,9 @@ def display():
     glVertex2f(475, 550)
     glEnd()
 
-    # Rectangle using two triangles
+    # Rectangle using Two Colored Triangles (Top-Left)
+
+    # Triangle 1 (Blue)
     glColor3f(0, 0, 1)
     glBegin(GL_TRIANGLES)
     glVertex2f(50, 400)
@@ -33,6 +35,7 @@ def display():
     glVertex2f(250, 550)
     glEnd()
 
+    # Triangle 2 (Red)
     glColor3f(1, 0, 0)
     glBegin(GL_TRIANGLES)
     glVertex2f(50, 400)
@@ -40,7 +43,7 @@ def display():
     glVertex2f(250, 550)
     glEnd()
 
-    # Orange Pentagon
+    # Small Orange Pentagon (Bottom-Right)
     glColor3f(1.0, 0.5, 0.0)
     glBegin(GL_POLYGON)
     glVertex2f(450, 80)

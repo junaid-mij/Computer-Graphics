@@ -103,6 +103,7 @@ def timer(value):
 def display():
     glClear(GL_COLOR_BUFFER_BIT)
 
+    # DDA Line
     dda_points, dda_time = DDA(100,100,300,300)
 
     glColor3f(1,0,0)
@@ -114,6 +115,7 @@ def display():
 
     draw_text(20,570,f"DDA Time: {dda_time} ns")
 
+    # Bresenham Line after 3 seconds
     if show_bresenham:
         bres_points, bres_time = Bresenham(100,300,300,100)
 
@@ -125,7 +127,8 @@ def display():
         glEnd()
 
         draw_text(20,540,f"Bresenham Time: {bres_time} ns")
-
+    
+    # Circle
     glColor3f(0,1,0)
     drawCircle(250,250,10)
 
